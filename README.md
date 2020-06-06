@@ -5,6 +5,7 @@
 A Movie Recommendation-System based on 
 [MovieTweetings](https://github.com/sidooms/MovieTweetings/tree/master/latest) Dataset
 
+This Project is a part of Data Science Nanodegree Program by Udacity. The initial dataset contains the users, movies, and ratings of the movies. The aim of the project is to build a Recommendation System that recommend movies in the best possible way.
 
 ### License
 
