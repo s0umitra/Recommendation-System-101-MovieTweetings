@@ -8,6 +8,6 @@ A Movie Recommendation-System based on
 
 ### License
 
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](https://github.com/s0umitra/Face-ID/blob/master/LICENSE.md)
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](https://github.com/s0umitra/Recommendation-System-101-MovieTweetings/blob/master/LICENSE.md)
 
-This software is licenced under [MIT](https://github.com/s0umitra/Face-ID/blob/master/LICENSE.md)
+This software is licenced under [MIT](https://github.com/s0umitra/Recommendation-System-101-MovieTweetings/blob/masterLICENSE.md)
