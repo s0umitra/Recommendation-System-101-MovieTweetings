@@ -57,7 +57,7 @@ def find_similar_movies(movie_id, movies_df):
     # find the row of each movie id
     movie_idx = np.where(movies_df['movie_id'] == movie_id)[0][0]
 
-    # find the most similar movie indices - to start I said they need to be the same for all content
+    # find the most similar movie indices
     similar_indexes = np.where(dot_prod_movies[movie_idx] == np.max(dot_prod_movies[movie_idx]))[0]
 
     # pull the movie titles based on the indices

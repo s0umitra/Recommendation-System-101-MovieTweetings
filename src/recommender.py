@@ -39,7 +39,7 @@ class Recommender:
         :param iterators: (int) the number of iterations
         :return: None
         """
-        # Store inputs as attributes
+
         self.reviews = pd.read_csv(reviews_pth)
         self.movies = pd.read_csv(movies_pth)
 
@@ -48,12 +48,11 @@ class Recommender:
         self.user_item_df = user_vs_item.groupby(['user_id', 'movie_id'])['rating'].max().unstack()
         self.user_item_mat = np.array(self.user_item_df)
 
-        # Store more inputs
+        # Store inputs
         self.latent_features = latent_features
         self.learning_rate = learning_rate
         self.iterators = iterators
 
-        # Set up useful values to be used through the rest of the function
         self.n_users = self.user_item_mat.shape[0]
         self.n_movies = self.user_item_mat.shape[1]
         self.num_ratings = np.count_nonzero(~np.isnan(self.user_item_mat))
@@ -140,11 +139,11 @@ class Recommender:
         :return recs: (array) a list or numpy array of recommended movies like the
                        given movie, or recs for a user_id given
         """
-        # if the user is available from the matrix factorization data,
-        # I will use this and rank movies based on the predicted values
-        # For use with user indexing
+
+        # if the user is available from the matrix factorization data
         rec_ids, rec_names = None, None
         if _id_type == 'user':
+
             if _id in self.user_ids_series:
                 # Get the index of which row the user is in for use in U matrix
                 idx = np.where(self.user_ids_series == _id)[0][0]
@@ -168,6 +167,6 @@ class Recommender:
             if _id in self.movie_ids_series:
                 rec_names = list(lib.find_similar_movies(_id, self.movies))[:rec_num]
             else:
-                print("That movie doesn't exist in our database.  Sorry, we don't have any recommendations for you.")
+                print("That movie doesn't exist in our database. Sorry, we don't have any recommendations for you.")
 
         return rec_ids, rec_names

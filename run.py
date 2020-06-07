@@ -33,11 +33,14 @@ if __name__ == '__main__':
     rec.fit(reviews_pth='data/train_data.csv', movies_pth='data/movies_clean.csv', learning_rate=.01, iterators=1)
 
     # make recommendations
-    """_id = 66
-    id_type = 'user'"""
+    # 'user' or 'movie'
 
+    _id = 66
+    id_type = 'user'
+
+    """
     _id = 1675434
-    id_type = 'movie'  # 'user' or 'movie'
+    id_type = 'movie'"""
 
     run(id_type)
 
