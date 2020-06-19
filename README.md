@@ -7,7 +7,7 @@ A Movie Recommendation-System based on
 
 This Project is a part of Data Science Nanodegree Program by Udacity in collaboration with IBM. The initial dataset contains the users, movies, and ratings of the movies. The aim of the project is to build a Recommendation System that recommend movies in the best possible way.
 
-This system uses Hybrid method to make recommendations (the mixed usage of Knowledge based, Collarorative and Content Based Filtering).
+This system uses Hybrid method to make recommendations (the mixed usage of Knowledge based, Collaborative and Content Based Filtering).
 
 ### Execution Flow:
 
